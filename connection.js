@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-mongoose.connect('mongodb://yaquake3:tuhasuga88@127.0.0.1:27017/personal_website',
+mongoose.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0-njnty.mongodb.net/resume`,
+
     {
         useUnifiedTopology: true,
         useNewUrlParser: true
